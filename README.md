@@ -1,4 +1,4 @@
-# ZeroTierBridge
+# zerotier-docker-container-nat
 
 A container to provide out-of-the-box bridging functionality to a ZeroTier network.
 
@@ -28,9 +28,9 @@ If you want to disable bridging, set `ZT_BRIDGE=false`. This can be done after t
 
 ### OG Docker
 
-`docker build -t zerotierbridge .`
+`docker build -t zerotier-docker-container-nat .`
 
-`docker run --privileged -e ZT_NETWORKS=NETWORK_1 NETWORK_2 -e ZT_BRIDGE=true zerotierbridge:latest`
+`docker run --privileged -e ZT_NETWORKS=NETWORK_1 NETWORK_2 -e ZT_BRIDGE=true zerotier-docker-container-nat:latest`
 
 Add your network ID(s) into the `ZT_NETWORKS` argument, space separated.
 
@@ -40,7 +40,7 @@ Disable bridging by passing `ZT_BRIDGE=false`. This can be done after the initia
 
 If you would like the container to retain the same ZeroTier client ID on reboot, attach a volume as per the below.
 
-`docker run --privileged -e ZT_NETWORKS=NETWORK_ID_HERE ZT_BRIDGE=true -v zt_config:/var/lib/zerotier-one/ zerotierbridge:latest`
+`docker run --privileged -e ZT_NETWORKS=NETWORK_ID_HERE ZT_BRIDGE=true -v zt_config:/var/lib/zerotier-one/ zerotier-docker-container-nat:latest`
 
 #### Caveat: Architecture
 
