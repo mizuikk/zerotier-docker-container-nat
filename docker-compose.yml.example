@@ -7,8 +7,11 @@ services:
     volumes:
       - zerotier-one:/var/lib/zerotier-one
     environment:
-      - ZT_NETWORKS=xxx
+      - ZT_NETWORKS=xxx1 xxx2
       - ZT_BRIDGE=true
+    ports:
+      - 9993:9993/udp
+
     # for predefined network
     #networks:
     #  - my-br
