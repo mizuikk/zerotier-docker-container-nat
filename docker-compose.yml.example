@@ -1,15 +1,22 @@
-version: "3"
-
 services:
-  zerotierbridge:
-    container_name: zerotierbridge
-    image: registry.dangerous.tech/dangeroustech/zerotierbridge
+  zerotier-docker-container-nat:
+    container_name: zerotier-docker-container-nat
+    image: zerotier-docker-container-nat
     restart: always
     privileged: true
     volumes:
-      - zt_config:/var/lib/zerotier-one
+      - zerotier-one:/var/lib/zerotier-one
     environment:
-      - ZT_NETWORKS=NETWORK_ID_1 NETWORK_ID_2 NETWORK_ID_3
+      - ZT_NETWORKS=xxx
       - ZT_BRIDGE=true
+    # for predefined network
+    networks:
+      - my-br
+
+# for predefined network
+networks:
+  my-br:
+    external: true
+
 volumes:
-  zt_config:
+  zerotier-one:
