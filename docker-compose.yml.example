@@ -10,13 +10,13 @@ services:
       - ZT_NETWORKS=xxx
       - ZT_BRIDGE=true
     # for predefined network
-    networks:
-      - my-br
+    #networks:
+      #- my-br
 
 # for predefined network
-networks:
-  my-br:
-    external: true
+#networks:
+  #my-br:
+    #external: true
 
 volumes:
   zerotier-one:
