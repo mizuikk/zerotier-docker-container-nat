@@ -1,3 +1,17 @@
+# Warning
+
+0. You do **not** need to check the "Active bridge" configuration box.
+
+1. When creating a Docker network with a subnet like `--subnet=172.18.0.0/16` and attempting to add a route (e.g., Target: `172.18.0.0/16`, Gateway: `10.6.6.1`), the route **may fail to be created**. You can verify this by running `route -n` on the ZeroTier client side. This suggests that ZeroTier may not fully support routes with a `/16` subnet mask.
+
+   However, when using a `/24` subnet configuration (e.g., `--subnet=192.168.2.0/24`, Gateway: `192.168.2.1`), the route is successfully created, allowing all ZeroTier clients to access the `192.168.2.0/24` subnet.
+
+### Key Observations:
+- `/16` subnet routes may not function as expected in ZeroTier.
+- `/24` subnet configurations appear to work reliably.
+- Always verify routes with `route -n` on client devices.
+
+
 # zerotier-docker-container-nat
 
 A container to provide out-of-the-box bridging functionality to a ZeroTier network.
