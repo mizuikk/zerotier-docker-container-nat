@@ -8,15 +8,15 @@ A container to provide out-of-the-box bridging functionality to a ZeroTier netwo
 
 - Docker running as your logged in user (if `docker ps` runs then you're good, if not follow the link ->) - [Linux instructions here](https://docs.docker.com/engine/install/linux-postinstall/)
 
-### ZeroTier UI Changes
+~~### ZeroTier UI Changes~~
 
-Once running, log into your ZeroTier interface and approve the new device. Click the wrench next to the name and select 'Allow Ethernet Bridging.'
+~~Once running, log into your ZeroTier interface and approve the new device. Click the wrench next to the name and select 'Allow Ethernet Bridging.'~~
 
-![brave_RxG5EgQinY](https://user-images.githubusercontent.com/1135584/129230874-76f80345-5389-46f7-b892-0692f41be20b.png)
+~~![brave_RxG5EgQinY](https://user-images.githubusercontent.com/1135584/129230874-76f80345-5389-46f7-b892-0692f41be20b.png)~~
 
-You also need to add a static route into ZeroTier so that the traffic is routed correctly. Add this a bit larger than normal because of [longest prefix matching](https://en.wikipedia.org/wiki/Longest_prefix_match).
+~~You also need to add a static route into ZeroTier so that the traffic is routed correctly. Add this a bit larger than normal because of [longest prefix matching](https://en.wikipedia.org/wiki/Longest_prefix_match).~~
 
-![brave_4wHd9zo193](https://user-images.githubusercontent.com/1135584/129230132-11bcfb72-7d9b-4b40-a4e5-72130c583077.png)
+~~![brave_4wHd9zo193](https://user-images.githubusercontent.com/1135584/129230132-11bcfb72-7d9b-4b40-a4e5-72130c583077.png)~~
 
 ### Docker Compose
 
