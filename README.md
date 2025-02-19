@@ -11,6 +11,7 @@
 - `/24` subnet configurations appear to work reliably.
 - Always verify routes with `route -n` on client devices.
 - **The A and B segments of your target address may need to be the same as the local ones, for example, 192.168.2.0/24.**
+- Run with --network zt-br --ip 192.168.2.10, and then you will be able to access your container at 192.168.2.10.
 
 # zerotier-docker-container-nat
 
