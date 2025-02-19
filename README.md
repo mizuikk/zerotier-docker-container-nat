@@ -20,7 +20,7 @@ A container to provide out-of-the-box bridging functionality to a ZeroTier netwo
 
 ### Docker Compose
 
-**You need to edit the `ZT_NETWORKS` ~~and `ARCH`~~ variable in the `docker-compose.yml` file first to add your networks and make sure your acrhitecture is correct (see [this page](http://download.zerotier.com/debian/buster/pool/main/z/zerotier-one/) for examples, usually either amd64 or arm64)**
+**You need to edit the `ZT_NETWORKS` ~~and `ARCH`~~ variable in the `docker-compose.yml` file first to add your networks ~~and make sure your acrhitecture is correct (see [this page](http://download.zerotier.com/debian/buster/pool/main/z/zerotier-one/) for examples, usually either amd64 or arm64)**~~
 
 Easiest way to bring up is via Docker Compose. Rename `docker-compose.yml.example` to `docker-compose.yml` and run `docker compose up -d`.
 
